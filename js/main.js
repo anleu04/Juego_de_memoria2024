@@ -1,23 +1,11 @@
-let cards1= ["🥸","👽","🥱","😎","🫢","😏","🙂","🙃","😮‍💨","😡","🤯","🫣"]
 
-let cards2= ["🥸","👽","🥱","😎","🫢","😏","🙂","🙃","😮‍💨","😡","🤯","🫣"]
+let root = document.querySelector("#root");
 
-let todas_las_tarjetas = cards1.concat(cards2);
+let componentes = `
+    <header id="header"></header>
+    <section class="section_aciertos"></section>
+    <div class="tablero"></div>
+    <footer></footer>
+`;
 
-function repartir_cartas(){
-   let tablero = document.querySelector("#root");
-   
-   todas_las_tarjetas.forEach((cada_carta)=> {
-      let carta = document.createElement("div")
-      carta.classList.add("carta_tracera")
-   carta.innerHTML = `<div class="carta_fontral">${cada_carta}</div>`
-
-   tablero.appendChild(carta);})
-   
-
-   
-
-}
-
-repartir_cartas();
-
+root.innerHTML =  componentes;
